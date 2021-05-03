@@ -9,21 +9,18 @@ public class AppCix {
 	@Bean
 	public MemberDao memberDao() {
 		return new MemberDao();
-		
 	}
-	
+
 	@Bean
 	public MemberRegisterService memberRegSvc() {
 		return new MemberRegisterService(memberDao());
 	}
-	
+
 	@Bean
 	public ChangePasswordService changePwSvc() {
 		ChangePasswordService PwSvc = new ChangePasswordService();
 		PwSvc.setMemberDao(memberDao());
 		return PwSvc;
 	}
-	
-	
-	
+
 }
