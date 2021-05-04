@@ -32,16 +32,19 @@ public class AppCix {
 	@Bean
 	public MemberInfoPrinter infoPrinter() {
 		MemberInfoPrinter infoPrinter = new MemberInfoPrinter();
-		infoPrinter.setMemberDao(memberDao());
-		infoPrinter.setPrinter(memberPrinter());
+		/*
+		 * infoPrinter.setMemberDao(memberDao());
+		 * infoPrinter.setPrinter(memberPrinter());
+		 */
 		return infoPrinter;
 	}	
 	
 	@Bean
 	public VersionPrinter versionPrinter() {
 		VersionPrinter versionPrinter = new VersionPrinter();
-		versionPrinter.setMajorVersion(5);
-		versionPrinter.setMinorVersion(0);
+		/*
+		 * versionPrinter.setMajorVersion(5); versionPrinter.setMinorVersion(0);
+		 */
 		return versionPrinter;
 	}	
 	
@@ -53,7 +56,7 @@ public class AppCix {
 	@Bean
 	public ChangePasswordService changePwSvc() {
 		ChangePasswordService PwSvc = new ChangePasswordService();
-		PwSvc.setMemberDao(memberDao());
+		/* PwSvc.setMemberDao(memberDao()); */
 		return PwSvc;
 	}
 
