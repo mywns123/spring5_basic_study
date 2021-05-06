@@ -10,6 +10,9 @@ public class MemberLIstPrinter {
 	@Autowired
 	private MemberPrinter printer;
 
+	public MemberLIstPrinter() {
+	}
+
 	public MemberLIstPrinter(MemberDao memberDao, MemberPrinter printer) {
 		this.memberDao = memberDao;
 		this.printer = printer;

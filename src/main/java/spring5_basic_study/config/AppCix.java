@@ -17,46 +17,40 @@ public class AppCix {
 	@Bean
 	public MemberDao memberDao() {
 		return new MemberDao();
-	}	
-	
+	}
+
 	@Bean
 	public MemberPrinter memberPrinter() {
 		return new MemberPrinter();
-	}	
-	
+	}
+
 	@Bean
 	public MemberLIstPrinter listPrinter() {
-		return new MemberLIstPrinter(memberDao(), memberPrinter());
-	}	
+		return new MemberLIstPrinter();
+	}
 
 	@Bean
 	public MemberInfoPrinter infoPrinter() {
 		MemberInfoPrinter infoPrinter = new MemberInfoPrinter();
-		/*
-		 * infoPrinter.setMemberDao(memberDao());
-		 * infoPrinter.setPrinter(memberPrinter());
-		 */
 		return infoPrinter;
-	}	
-	
+	}
+
 	@Bean
 	public VersionPrinter versionPrinter() {
 		VersionPrinter versionPrinter = new VersionPrinter();
-		/*
-		 * versionPrinter.setMajorVersion(5); versionPrinter.setMinorVersion(0);
-		 */
+		versionPrinter.setMajorVersion(5);
+		versionPrinter.setMinorVersion(0);
 		return versionPrinter;
-	}	
-	
+	}
+
 	@Bean
 	public MemberRegisterService memberRegSvc() {
-		return new MemberRegisterService(memberDao());
+		return new MemberRegisterService();
 	}
 
 	@Bean
 	public ChangePasswordService changePwSvc() {
 		ChangePasswordService PwSvc = new ChangePasswordService();
-		/* PwSvc.setMemberDao(memberDao()); */
 		return PwSvc;
 	}
 
